@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pokemon Battle Scene</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="static/app.css" type="text/css">
+</head>
+<body>
+  <div class="container pokemon-background">
+    
+    <div class="top-section">
+
+      <div class="scoreboard opponent-scoreboard">
+        <div class="tag">
+          Opponent
+        </div>
+        <div class="name">
+          Pikachu
+        </div>
+        <div class="progressbar">
+          <div class="total-progressbar">
+            <div class="actual-progressbar"></div>
+          </div>
+        </div>
+        <div class="score">
+          <span class="actual-score">960/</span>
+          <span class="total-score">1000</span>
+        </div>
+      </div>
+
+      <div class="image-section opponent-image">
+        <div class="pokemon-image">
+          <img src="static/pikachu.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-section">
+
+      <div class="image-section user-image">
+        <div class="pokemon-image">
+          <img src="static/bulbasaur.svg" alt="">
+        </div>
+      </div>
+
+      <div class="scoreboard user-scoreboard">
+        <div class="tag">
+          Yours
+        </div>
+        <div class="name">
+          Bulbasaur
+        </div>
+        <div class="progressbar">
+          <div class="total-progressbar">
+            <div class="actual-progressbar"></div>
+          </div>
+        </div>
+        <div class="score">
+          <span class="actual-score">950/</span>
+          <span class="total-score">1000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="attacks-section">
+      <div class="attacks-heading">
+        Attacks
+      </div>
+      <div class="attacks">
+
+        <div class="attack attack-medium">
+          Thunder Jolt
+          <span class="remaining-attacks">30</span>
+        </div>
+        <div class="attack attack-high">
+          Electro Ball
+          <span class="remaining-attacks">14</span>
+        </div>
+        <div class="attack attack-medium">
+          Volt Tackle
+          <span class="remaining-attacks">4</span>
+        </div>
+        <div class="attack attack-low">
+          Thunder Ball
+          <span class="remaining-attacks">19</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
