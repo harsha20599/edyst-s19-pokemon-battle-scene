@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pokemon Battle Scene</title>
-  <link href="https://fonts.googleapis.com/css?family=Kanit:400,700" rel="stylesheet">
   <link rel="stylesheet" href="static/app.css" type="text/css">
 </head>
 <body>
+  <!-- A wrapper for the game  -->
   <div class="container pokemon-background">
     
+    <!-- Opponent section -->
     <div class="top-section">
-
+      <!-- opponent scoreboard -->
       <div class="scoreboard opponent-scoreboard">
         <div class="tag">
           Opponent
@@ -31,21 +32,25 @@
         </div>
       </div>
 
+      <!-- Opponent Pokemon image -->
       <div class="image-section opponent-image">
-        <div class="pokemon-image">
-          <img src="static/pikachu.svg" alt="">
+        <div class="pokemon-image pokemon-1">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="">
         </div>
       </div>
     </div>
 
+    <!-- User Section -->
     <div class="bottom-section">
-
+      
+      <!-- User Pokemon image -->
       <div class="image-section user-image">
-        <div class="pokemon-image">
-          <img src="static/bulbasaur.svg" alt="">
+        <div class="pokemon-image pokemon-2">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" alt="">
         </div>
       </div>
 
+      <!-- User scoreboard -->
       <div class="scoreboard user-scoreboard">
         <div class="tag">
           Yours
@@ -65,12 +70,13 @@
       </div>
     </div>
 
+    <!-- Attacks section -->
     <div class="attacks-section">
       <div class="attacks-heading">
         Attacks
       </div>
       <div class="attacks">
-
+        <!-- Attack is represented as a button, followed by it's count  -->
         <div class="attack attack-medium">
           Thunder Jolt
           <span class="remaining-attacks">30</span>
