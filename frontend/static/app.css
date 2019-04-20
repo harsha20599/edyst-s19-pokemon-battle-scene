@@ -78,29 +78,6 @@ body{
   height: 180px;
 }
 
-/* The pokemon animation is referred from
-https://stackoverflow.com/questions/35990445/how-to-move-a-div-up-and-down-infinitely-in-css3 */
-.pokemon-1 img{
-  animation: MoveUpDown 2s linear infinite;
-  position: absolute;
-  left: 0;
-  bottom: -20px;
-}
-.pokemon-2 img{
-  animation: MoveUpDown 1.5s linear infinite;
-  position: absolute;
-  left: 0;
-  bottom: -20px;
-}
-@keyframes MoveUpDown {
-  0%, 100% {
-    bottom: -15px;
-  }
-  50% {
-    bottom: -20px;
-  }
-}
-
 .bottom-section{
   margin-top: 50px;
 }
@@ -198,7 +175,7 @@ https://stackoverflow.com/questions/35990445/how-to-move-a-div-up-and-down-infin
     background-position: 50% -114px;
   }
   body{
-    background: url('bg.png') no-repeat;
+    background: url('bg.png')  no-repeat center center fixed;
     background-position: center;
     background-size: cover;
   }
@@ -222,3 +199,47 @@ https://stackoverflow.com/questions/35990445/how-to-move-a-div-up-and-down-infin
   }
 } 
 
+/* ANIMATIONS */
+
+/* The pokemon animation is referred from
+https://stackoverflow.com/questions/35990445/how-to-move-a-div-up-and-down-infinitely-in-css3 */
+.pokemon-1 img{
+  animation: MoveUpDown 2s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+.pokemon-2 img{
+  animation: MoveUpDown 1.5s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: -15px;
+  }
+  50% {
+    bottom: -20px;
+  }
+}
+
+/* Referred from https://www.w3schools.com/howto/howto_css_shake_image.asp */
+.shake{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

@@ -44,7 +44,7 @@
     <div class="bottom-section">
       
       <!-- User Pokemon image -->
-      <div class="image-section user-image">
+      <div class="image-section user-image ">
         <div class="pokemon-image pokemon-2">
           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" alt="">
         </div>
@@ -77,19 +77,19 @@
       </div>
       <div class="attacks">
         <!-- Attack is represented as a button, followed by it's count  -->
-        <div class="attack attack-medium">
+        <div class="attack attack-medium" onclick="makeAttack(this,1)">
           Thunder Jolt
           <span class="remaining-attacks">30</span>
         </div>
-        <div class="attack attack-high">
+        <div class="attack attack-high" onclick="makeAttack(this,2)">
           Electro Ball
           <span class="remaining-attacks">14</span>
         </div>
-        <div class="attack attack-medium">
+        <div class="attack attack-medium" onclick="makeAttack(this,3)">
           Volt Tackle
           <span class="remaining-attacks">4</span>
         </div>
-        <div class="attack attack-low">
+        <div class="attack attack-low" onclick="makeAttack(this,4)">
           Thunder Ball
           <span class="remaining-attacks">19</span>
         </div>
@@ -98,5 +98,35 @@
     </div>
 
   </div>
+
+  <script>
+
+    // Referring from many sources like w3schools, stackoverflow, etc. I implemented this code
+    // This function is used to perform attack. As of this code, it just decrements the remaining attacks value
+    // and shakes the user's pokemon image to let the user more engaged.
+    function makeAttack(button,id){
+      // Grabbing the clicked button
+      var value = button.childNodes[1].innerHTML;
+      // Decrementing the value of left attacks count
+      button.childNodes[1].innerHTML = (value) > 0 ? value-1 : value;
+      if(value > 0 ){
+        // Calling shake image function to shake the pokemon
+        shakeImage('user-image');
+      }
+    }
+
+    // This function is used to shake the pokemon.
+    function shakeImage(target){      
+      // Identifying the target image based on class-name parameter
+      var image = document.getElementsByClassName(target)[0].classList;
+      // Adding classname "shake" to the image
+      image.add('shake');
+      setTimeout(function() {
+        // Removing the class name "shake" after 600 milliseconds
+        image.remove('shake');
+      }, 600);
+    }
+  
+  </script>
 </body>
 </html>
